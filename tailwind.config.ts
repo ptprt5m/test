@@ -17,11 +17,16 @@ const config: Config = {
           "linear-gradient(180deg, #FFFFFF 35.7%, #D8EFFF 100%)",
         "gradient-card": "linear-gradient(90deg, #FBFDFF 0%, #D8EFFF 100.86%)",
       },
+      lineHeight: {
+        'main': '32.69px',
+        'alternate': '38.14px'
+      },
       boxShadow: {
         wrapper: "0px 0px 25px 0px #8EA0AD59",
       },
       colors: {
         blue: "#01457A",
+        desert: '#FDD96640'
       },
     },
     screens: {
