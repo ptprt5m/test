@@ -1,20 +1,20 @@
 import Image from "next/image";
 
 export const HeaderImageBlock = () => (
-  <div className="relative">
+  <div className="relative w-full">
     <Image
       src="/Vector 47.png"
       width={1039}
       height={500}
       alt="vector"
-      className="absolute top-0 left-[610px]"
+      className="absolute top-0 left-[400px] xl:left-[610px] w-min xl:w-full max-w-[1039px]"
     />
     <Image
       src="/Vector 46.png"
       width={939}
       height={500}
       alt="vector"
-      className="absolute top-0 left-[534px]"
+      className="absolute top-0 left-[300px] xl:left-[534px] w-min xl:w-full max-w-[939px]"
     />
 
     <Image
@@ -22,7 +22,7 @@ export const HeaderImageBlock = () => (
       width={1247}
       height={500}
       alt="vector"
-      className="absolute top-0"
+      className="absolute top-0 w-min xl:w-full max-w-[1247px]"
     />
   </div>
 );

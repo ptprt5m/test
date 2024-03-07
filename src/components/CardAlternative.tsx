@@ -16,14 +16,28 @@ export const CardAlternative: FC<ICardAlternativeProps> = ({
   subtitle,
   text,
   iconWidth,
-  iconHeight
+  iconHeight,
 }) => (
   <div className="py-[30px] px-[19px] w-full flex flex-col gap-[15px] items-center text-center bg-desert shadow-wrapper rounded-[20px]">
     {img && (
-      <Image src={img} width={iconWidth ?? 178} height={iconHeight ?? 145} alt="image" />
+      <Image
+        src={img}
+        width={iconWidth ?? 178}
+        height={iconHeight ?? 145}
+        alt="image"
+      />
     )}
-    {title && <span className="font-bold text-8xl leading-[130.75px]">{title}</span>}
-    {subtitle && <p className="text-[26px] leading-[35.41px]" dangerouslySetInnerHTML={{ __html: subtitle }} />}
+    {title && (
+      <span className="font-bold text-4xl xl:text-8xl xl:leading-[130.75px]">
+        {title}
+      </span>
+    )}
+    {subtitle && (
+      <p
+        className="text-lg xl:text-[26px] leading-[35.41px]"
+        dangerouslySetInnerHTML={{ __html: subtitle }}
+      />
+    )}
     {text &&
       text.map((paragraph, i) => (
         <p key={i} className="text-lg font-light leading-[24.52px]">

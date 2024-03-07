@@ -18,20 +18,35 @@ const config: Config = {
         "gradient-card": "linear-gradient(90deg, #FBFDFF 0%, #D8EFFF 100.86%)",
       },
       lineHeight: {
-        'main': '32.69px',
-        'alternate': '38.14px'
+        main: "32.69px",
+        alternate: "38.14px",
       },
       boxShadow: {
         wrapper: "0px 0px 25px 0px #8EA0AD59",
       },
       colors: {
         blue: "#01457A",
-        desert: '#FDD96640'
+        desert: "#FDD96640",
+      },
+      screens: {
+        wrapper: "1380px",
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
       },
     },
-    screens: {
-      wrapper: "1380px",
-    },
+
     fontFamily: {
       title: ["Century Gothic", "sans-serif"],
     },

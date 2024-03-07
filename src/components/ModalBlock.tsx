@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, type FC, type ReactNode } from "react";
+import { useState, type FC, type ReactNode, useEffect } from "react";
 
 interface IModalBlockProps {
   img?: string;
@@ -21,6 +21,15 @@ export const ModalBlock: FC<IModalBlockProps> = ({
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+  }, [isOpen]);
+
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
@@ -31,7 +40,7 @@ export const ModalBlock: FC<IModalBlockProps> = ({
           className="fixed top-0 left-0 z-20 w-screen h-screen bg-black/[.5] backdrop-blur flex items-center justify-center"
           onClick={toggleModal}
         >
-          <div className="max-w-[1290px] bg-white shadow-wrapper rounded-[20px] p-10 text-2xl flex flex-col gap-10">
+          <div className="max-w-[1290px] w-full m-5 bg-white shadow-wrapper rounded-[20px] p-10 text-2xl flex flex-col gap-10">
             <div className="flex flex-col gap-[9px]">
               {Array.isArray(text)
                 ? text.map((paragraph, i) => (

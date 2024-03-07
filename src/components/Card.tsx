@@ -28,7 +28,7 @@ export const Card: FC<ICardProps> = ({
     )}
     {title && (
       <span
-        className="font-medium text-[28px] leading-alternate"
+        className="font-medium text-[28px] leading-alternate break-all"
         dangerouslySetInnerHTML={{ __html: title }}
       />
     )}

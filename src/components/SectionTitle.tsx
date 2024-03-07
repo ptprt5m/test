@@ -12,7 +12,7 @@ export const SectionTitle: FC<ISectionTitleProps> = ({ title }) => (
       width={1335}
       height={110}
       alt="vector"
-      className="absolute top-0"
+      className="absolute top-0 w-full max-w-[1135px]"
     />
     <h1 className="font-title text-[40px] font-bold pt-[18px] p-[45px] leading-[50px] z-10 relative">
       {title ?? "Заголовок"}
