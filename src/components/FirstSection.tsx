@@ -39,7 +39,7 @@ export const FirstSection = () => (
             <span className="font-bold text-[30px] leading-[40.86px]">
               {COPDBlock.items[1].cards?.title}
             </span>
-            <div className="flex gap-[54px] justify-between">
+            <div className="flex flex-col md:flex-row gap-[54px] justify-between">
               {COPDBlock.items[1].cards?.items.map((item) => (
                 <CardAlternative
                   key={item.id}

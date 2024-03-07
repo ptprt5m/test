@@ -40,7 +40,7 @@ export const ModalBlock: FC<IModalBlockProps> = ({
           className="fixed top-0 left-0 z-20 w-screen h-screen bg-black/[.5] backdrop-blur flex items-center justify-center"
           onClick={toggleModal}
         >
-          <div className="max-w-[1290px] w-full m-5 bg-white shadow-wrapper rounded-[20px] p-10 text-2xl flex flex-col gap-10">
+          <div className="max-w-[1290px] w-full m-5 bg-white shadow-wrapper rounded-[20px] p-10 text-2xl flex flex-col gap-10 overflow-auto max-h-screen">
             <div className="flex flex-col gap-[9px]">
               {Array.isArray(text)
                 ? text.map((paragraph, i) => (
@@ -56,15 +56,15 @@ export const ModalBlock: FC<IModalBlockProps> = ({
         </div>
       )}
 
-      <div className="flex justify-between gap-7">
+      <div className="flex flex-col md:flex-row justify-between gap-7">
         <div className="rounded-full rounded-tl-none w-20 h-20 flex items-center justify-center bg-gradient-custom">
           {img && (
             <Image src={img} width={45} height={45} alt="modal block icon" />
           )}
         </div>
-        <div className="w-full max-w-[295px] h-[115px] py-2 bg-[url('/Vector-50.png')]">
+        <div className="w-full max-w-[295px] h-[115px] py-2 bg-[url('/Vector-50.png')] bg-contain bg-no-repeat bg-center">
           <span
-            className="w-full max-w-[248px] text-2xl"
+            className="w-full max-w-[248px] text-xl md:text-2xl"
             dangerouslySetInnerHTML={{ __html: title as string }}
           />
         </div>
